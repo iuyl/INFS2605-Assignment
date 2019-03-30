@@ -5,6 +5,12 @@
  */
 package assignment.pkg1;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -32,7 +38,56 @@ public class Assignment1 extends Application {
      */
     public static void main(String[] args) {
         launch(args);
-        System.out.println("hello all");
+        try {
+            connect();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
+    
+    public static void connect() throws SQLException{
+		//write the four lines which connect your program to the database
+        Connection conn = DriverManager.getConnection("jdbc:sqlite:fitnessDatabase.db");
+        Statement st = conn.createStatement();
+        String createQuery = "CREATE TABLE IF NOT EXISTS Members "
+                + "(ID INTEGER PRIMARY KEY autoincrement, "
+                + "NAME TEXT NOT NULL "
+
+                +");";
+        
+                st.execute(createQuery);  
+
+        
+        createQuery = "CREATE TABLE IF NOT EXISTS Stats "
+                + "(ID INTEGER PRIMARY KEY autoincrement, "
+                + "MEMBER_ID INTEGER NOT NULL, "
+                + "CATEGORY TEXT NOT NULL, "
+                + "GOAL TEXT NULL "
+
+                +");";
+        
+                st.execute(createQuery);  
+                
+        createQuery = "CREATE TABLE IF NOT EXISTS Stats "
+                + "(ID INTEGER PRIMARY KEY autoincrement, "
+                + "STATS_ID INTEGER NOT NULL, "
+                + "VALUE TEXT NOT NULL, "
+                + "DATE TEXT NULL "
+
+                +");";
+        
+                st.execute(createQuery);  
+
+        
+            
+        st.close();
+        conn.close();
+	}
+	
+	
+	
+    
+    
     
 }
