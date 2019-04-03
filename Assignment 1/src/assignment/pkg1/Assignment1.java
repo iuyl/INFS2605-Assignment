@@ -50,29 +50,21 @@ public class Assignment1 extends Application {
 		//write the four lines which connect your program to the database
         Connection conn = DriverManager.getConnection("jdbc:sqlite:fitnessDatabase.db");
         Statement st = conn.createStatement();
-        String createQuery = "CREATE TABLE IF NOT EXISTS Members "
-                + "(ID INTEGER PRIMARY KEY autoincrement, "
-                + "NAME TEXT NOT NULL "
-
-                +");";
-        
-                st.execute(createQuery);  
 
         
-        createQuery = "CREATE TABLE IF NOT EXISTS Stats "
+        String createQuery = "CREATE TABLE IF NOT EXISTS Stats "
                 + "(ID INTEGER PRIMARY KEY autoincrement, "
-                + "MEMBER_ID INTEGER NOT NULL, "
                 + "CATEGORY TEXT NOT NULL, "
-                + "GOAL TEXT NULL "
+                + "GOAL INTEGER NULL "
 
                 +");";
         
                 st.execute(createQuery);  
                 
-        createQuery = "CREATE TABLE IF NOT EXISTS Stats "
+        createQuery = "CREATE TABLE IF NOT EXISTS StatsEntries "
                 + "(ID INTEGER PRIMARY KEY autoincrement, "
                 + "STATS_ID INTEGER NOT NULL, "
-                + "VALUE TEXT NOT NULL, "
+                + "VALUE INTEGER NOT NULL, "
                 + "DATE TEXT NULL "
 
                 +");";
