@@ -71,15 +71,18 @@ public class Assignment1 extends Application {
         
                 st.execute(createQuery);  
 
-        
             
         st.close();
         conn.close();
 	}
 	
-	
-	
+	//In javafx class (view controller)
+	//private void OnSaveClicked() {
+            //StatEntry newEntry = new StatEntry( type, volume );
+            
+            //DatabaseHelper.addNewStatEntry(newEntry);
+        }
+        
+       
     
-    
-    
-}
+   
