@@ -2,13 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-        <group/>
-=======
         <group>
-            <file>file:/Users/yilian/INFS2605-Assignment/Assignment%201/src/assignment/pkg1/Assignment1.java</file>
-            <file>file:/Users/yilian/INFS2605-Assignment/Assignment%201/src/assignment/pkg1/DatabaseHelper.java</file>
+            <file>file:/C:/Users/goldc/OneDrive/Documents/INFS2605-Assignment/Assignment%201/src/assignment/pkg1/FXMLDocumentController.java</file>
+            <file>file:/C:/Users/goldc/OneDrive/Documents/INFS2605-Assignment/Assignment%201/src/assignment/pkg1/FXMLEnterDataController.java</file>
+            <file>file:/C:/Users/goldc/OneDrive/Documents/INFS2605-Assignment/Assignment%201/src/assignment/pkg1/FXMLDashboardController.java</file>
+            <file>file:/C:/Users/goldc/OneDrive/Documents/INFS2605-Assignment/Assignment%201/src/assignment/pkg1/Assignment1.java</file>
+            <file>file:/C:/Users/goldc/OneDrive/Documents/INFS2605-Assignment/Assignment%201/src/assignment/pkg1/FXMLHomePageController.java</file>
+            <file>file:/C:/Users/goldc/OneDrive/Documents/INFS2605-Assignment/Assignment%201/src/assignment/pkg1/FXMLSetGoalController.java</file>
         </group>
->>>>>>> 632818756a063ba592914e0166b4825e76303584
     </open-files>
 </project-private>
