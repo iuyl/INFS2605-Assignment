@@ -25,10 +25,15 @@ public class Assignment1 extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+<<<<<<< HEAD
+        Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+        
+=======
         connect();
         insertCategories();
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
 
+>>>>>>> 5bc20147b2b08b5e178bdf5c6cf112c2500d4120
         Scene scene = new Scene(root);
 
         stage.setScene(scene);

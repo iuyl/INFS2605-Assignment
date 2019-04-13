@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.pkg1.FXMLHomePageController">
    <children>
       <TextArea layoutX="202.0" layoutY="69.0" prefHeight="236.0" prefWidth="197.0" />
       <Label fx:id="home" layoutX="261.0" layoutY="104.0" text="Home" underline="true">
@@ -14,8 +14,8 @@
             <Font size="28.0" />
          </font>
       </Label>
-      <Button fx:id="enterData" layoutX="259.0" layoutY="160.0" mnemonicParsing="false" text="Enter Data" />
-      <Button fx:id="progress" layoutX="264.0" layoutY="200.0" mnemonicParsing="false" text="Progress" />
-      <Button fx:id="setGoal" layoutX="265.0" layoutY="242.0" mnemonicParsing="false" text="Set Goal" />
+      <Button fx:id="enterData" layoutX="259.0" layoutY="160.0" mnemonicParsing="false" onAction="#handleEnterDataAction" text="Enter Data" />
+      <Button fx:id="progress" layoutX="264.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleProgressAction" text="Progress" />
+      <Button fx:id="setGoal" layoutX="265.0" layoutY="242.0" mnemonicParsing="false" onAction="#handleSetGoalAction" text="Set Goal" />
    </children>
 </Pane>
