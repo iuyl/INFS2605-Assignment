@@ -55,7 +55,7 @@ public final class DatabaseHelper {
 
         
         String setGoal = "INSERT OR REPLACE INTO stats (goal) "
-                + "VALUES (" + newGoalValue + ") where category is like " + stat;
+                + "VALUES (" + newGoalValue + ") where CATEGORY is like " + stat;
         st.execute(setGoal);
 
         st.close();
@@ -70,10 +70,10 @@ public final class DatabaseHelper {
         Statement st = conn.createStatement();
 
         
-        String getGoal = "SELECT goal as goal from stats where category is like " + stat;
+        String getGoal = "SELECT GOAL as GOAL from stats where CATEGORY is like " + stat;
         ResultSet goalResult = st.executeQuery(getGoal);
         
-        int goal = goalResult.getInt("goal");
+        int goal = goalResult.getInt("goal"); //attn
 
         st.close();
         conn.close();
@@ -89,16 +89,16 @@ public final class DatabaseHelper {
 
         int dateAsInt = 0; //parse date into int
         
-        String getStatsId = "SELECT id as stats_Id from stats where category is like " + stat;
+        String getStatsId = "SELECT ID as STATS_ID from stats where CATEGORY is like " + stat;
         ResultSet idResult = st.executeQuery(getStatsId);
         
-        int statsId = idResult.getInt("statsId");
+        int statsId = idResult.getInt("statsId"); //attn
         
         String getProgress = "SELECT SUM(value) as progress from StatsEntries where STATS_ID = " + statsId
                                 + "and date = " + dateAsInt;
         ResultSet progressResult = st.executeQuery(getProgress);
         
-        int progress = progressResult.getInt("progress");
+        int progress = progressResult.getInt("progress"); //attn
 
         st.close();
         conn.close();
