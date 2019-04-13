@@ -32,7 +32,7 @@ public final class DatabaseHelper {
         Connection conn = DriverManager.getConnection("jdbc:sqlite:fitnessDatabase.db");
         Statement st = conn.createStatement();
 
-        String getStatsId = "SELECT id as stats_Id from stats where CATEGORY is like " + category;
+        String getStatsId = "SELECT ID as STATS_ID from Stats where CATEGORY is like " + category;
         ResultSet idResult = st.executeQuery(getStatsId);
         
         int statsId = idResult.getInt("statsId");
