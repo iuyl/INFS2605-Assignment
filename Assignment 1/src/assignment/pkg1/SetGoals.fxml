@@ -8,15 +8,15 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="305.0" prefWidth="243.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.pkg1.FXMLSetGoalController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="305.0" prefWidth="243.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.pkg1.FXMLSetGoalController">
    <children>
-      <Label layoutX="50.0" layoutY="39.0" text="Set Goal" underline="true">
+      <Label fx:id="setGoal" layoutX="50.0" layoutY="39.0" text="Set Goal" underline="true">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <ComboBox layoutX="96.0" layoutY="128.0" prefHeight="27.0" prefWidth="118.0" />
-      <Button layoutX="173.0" layoutY="269.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="56.0" text="Save">
+      <ComboBox fx:id="categoryMenu" layoutX="96.0" layoutY="128.0" prefHeight="27.0" prefWidth="118.0" />
+      <Button fx:id="save" layoutX="173.0" layoutY="269.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="56.0" text="Save">
          <font>
             <Font size="11.0" />
          </font>
@@ -26,7 +26,7 @@
             <Font size="11.0" />
          </font>
       </Button>
-      <Text layoutX="25.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category:">
+      <Text fx:id="category" layoutX="25.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category:">
          <font>
             <Font size="15.0" />
          </font>
@@ -36,6 +36,6 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <TextField fx:id="volumeNumber" layoutX="96.0" layoutY="172.0" prefHeight="27.0" prefWidth="118.0" />
+      <TextField id="volumeNumber" fx:id="volumeNumber" layoutX="96.0" layoutY="172.0" prefHeight="27.0" prefWidth="118.0" />
    </children>
 </AnchorPane>

@@ -7,8 +7,13 @@ package assignment.pkg1;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -68,11 +73,27 @@ public class FXMLEnterDataController implements Initializable {
             
         }
     }
+    //method to parse date into ISO8601 String
+    void handleSaveButtonClick() throws SQLException {
+        LocalDate date = datePicker.getValue();
+        DatabaseHelper.addNewStatEntry(category.toString(), 0, date.toString());
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
          categoryMenu.getItems().removeAll(categoryMenu.getItems());
-         categoryMenu.getItems().addAll("Last Health Checkup", "Lean/Fat Mass Ratio", "BMI", "Overall Wellbeing", "Sleep Rating", "Resting Heart Rate", "Calories Consumed", "Gym Attendence", "Step Count", "Flights (Stairs) Climbed", "Resistance Exercise Mass");
+         categoryMenu.getItems().addAll("Last Health Check", "Lean/Fat Mass Ratio", "BMI", "Overall Wellbeing", "Sleep Rating", "Resting Heart Rate", "Calories Consumed", "Gym Attendence", "Step Count", "Flights (Stairs) Climbed", "Resistance Exercise Mass");
+         
+         
+         
+         save.setOnAction((ActionEvent e) -> {
+             try {
+                 LocalDate date = datePicker.getValue();
+                 DatabaseHelper.addNewStatEntry(categoryMenu.getValue().toString(), Integer.parseInt(volumeNumber.getText()), date.toString());
+             } catch (SQLException ex) {
+                 ex.printStackTrace();
+             }
+         });
     }
     
     

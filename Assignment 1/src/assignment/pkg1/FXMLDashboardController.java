@@ -5,10 +5,19 @@
  */
 package assignment.pkg1;
 import java.io.IOException;
+import java.net.URL;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -22,7 +31,7 @@ import javafx.stage.Stage;
  *
  * @author aiisonsuherly
  */
-public class FXMLDashboardController {
+public class FXMLDashboardController implements Initializable {
     
     @FXML
     private Label dashboard;
@@ -34,40 +43,73 @@ public class FXMLDashboardController {
     private Label fitness;
     
     @FXML
-    private ProgressBar progressBar1;
+    private ProgressBar HealthProg;
     
     @FXML
-    private ProgressBar progressBar2;
+    private ProgressBar LeanFatProg;
     
     @FXML
-    private ProgressBar progressBar3;
+    private ProgressBar BMIProg;
     
     @FXML
-    private ProgressBar progressBar4;
+    private ProgressBar WellbeingProg;
     
     @FXML
-    private ProgressBar progressBar5;
+    private ProgressBar GymAttendanceProg;
     
     @FXML
-    private ProgressBar progressBar6;
+    private ProgressBar StepProg;
     
     @FXML
-    private ProgressBar progressBar7;
+    private ProgressBar RestingHeartProg;
     
     @FXML
-    private ProgressBar progressBar8;
+    private ProgressBar CaloriesProg;
     
     @FXML
-    private ProgressBar progressBar9;
+    private ProgressBar FlightsProg;
     
     @FXML
-    private ProgressBar progressBar10;
+    private ProgressBar ResistanceProg;
     
     @FXML
-    private ProgressBar progressBar11;
+    private ProgressBar SleepProg;
     
     @FXML
-    private DatePicker date;
+    private Label HealthGoal;
+    
+    @FXML
+    private Label LeanFatGoal;
+    
+    @FXML
+    private Label BMIGoal;
+    
+    @FXML
+    private Label WellbeingGoal;
+    
+    @FXML
+    private Label GymAttendanceGoal;
+    
+    @FXML
+    private Label StepGoal;
+    
+    @FXML
+    private Label RestingHeartGoal;
+    
+    @FXML
+    private Label CaloriesGoal;
+    
+    @FXML
+    private Label FlightsGoal;
+    
+    @FXML
+    private Label ResistanceGoal;
+    
+    @FXML
+    private Label SleepGoal;
+    
+    @FXML
+    private DatePicker datePicker;
     
     
     @FXML
@@ -79,8 +121,92 @@ public class FXMLDashboardController {
             Stage stage = new Stage();
             stage.setScene(new Scene(root1));
             stage.show();
-        } catch (Exception e) {
+            } catch (Exception e) {
             
         }
+    }
+    void updateProgressBar(ProgressBar progressBar, String stat) throws SQLException {
+        LocalDate date = datePicker.getValue();
+        String dateAsString = date.toString();
+        
+        double progress = DatabaseHelper.getProgress(stat, dateAsString);
+        System.out.println("Progress " + progress + " for " + stat);
+        progressBar.setProgress(progress);
+    }
+    
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        
+        HashMap<String, ProgressBar> statsMap = new HashMap<String,ProgressBar>();
+        statsMap.put("BMI", BMIProg);
+        statsMap.put("Last Health Check", HealthProg);
+        statsMap.put("Lean/Fat Mass Ratio", LeanFatProg);
+        statsMap.put("Overall Wellbeing", WellbeingProg);
+        statsMap.put("Sleep Rating", SleepProg);
+        statsMap.put("Resting Heart Rate", RestingHeartProg);
+        statsMap.put("Calories Consumed", CaloriesProg);
+        statsMap.put("Gym Attendance", GymAttendanceProg);
+        statsMap.put("Step Count", StepProg);
+        statsMap.put("Flights (Stairs) Climbed", FlightsProg);
+        statsMap.put("Resistance Exercise Mass", ResistanceProg);
+        
+        datePicker.setValue(LocalDate.now());
+        
+        try {
+                for (HashMap.Entry<String, ProgressBar> entry : statsMap.entrySet()) {
+                    try {
+                        updateProgressBar(entry.getValue(), entry.getKey());
+                    } catch (SQLException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+                
+                BMIGoal.setText(String.valueOf(DatabaseHelper.getGoal("BMI")));
+                HealthGoal.setText(String.valueOf(DatabaseHelper.getGoal("Last Health Check")));
+                LeanFatGoal.setText(String.valueOf(DatabaseHelper.getGoal("Lean/Fat Mass Ratio")));
+                WellbeingGoal.setText(String.valueOf(DatabaseHelper.getGoal("Overall Wellbeing")));
+                SleepGoal.setText(String.valueOf(DatabaseHelper.getGoal("Sleep Rating")));
+                RestingHeartGoal.setText(String.valueOf(DatabaseHelper.getGoal("Resting Heart Rate")));
+                CaloriesGoal.setText(String.valueOf(DatabaseHelper.getGoal("Calories Consumed")));
+                GymAttendanceGoal.setText(String.valueOf(DatabaseHelper.getGoal("Gym Attendance")));
+                StepGoal.setText(String.valueOf(DatabaseHelper.getGoal("Step Count")));
+                FlightsGoal.setText(String.valueOf(DatabaseHelper.getGoal("Flights (Stairs) Climbed")));
+                ResistanceGoal.setText(String.valueOf(DatabaseHelper.getGoal("Resistance Exercise Mass")));
+                
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+
+            }
+        
+        datePicker.setOnAction((ActionEvent e) -> {
+            
+            try {
+                for (HashMap.Entry<String, ProgressBar> entry : statsMap.entrySet()) {
+                    try {
+                        updateProgressBar(entry.getValue(), entry.getKey());
+                    } catch (SQLException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+                
+                BMIGoal.setText(String.valueOf(DatabaseHelper.getGoal("BMI")));
+                HealthGoal.setText(String.valueOf(DatabaseHelper.getGoal("Last Health Check")));
+                LeanFatGoal.setText(String.valueOf(DatabaseHelper.getGoal("Lean/Fat Mass Ratio")));
+                WellbeingGoal.setText(String.valueOf(DatabaseHelper.getGoal("Overall Wellbeing")));
+                SleepGoal.setText(String.valueOf(DatabaseHelper.getGoal("Sleep Rating")));
+                RestingHeartGoal.setText(String.valueOf(DatabaseHelper.getGoal("Resting Heart Rate")));
+                CaloriesGoal.setText(String.valueOf(DatabaseHelper.getGoal("Calories Consumed")));
+                GymAttendanceGoal.setText(String.valueOf(DatabaseHelper.getGoal("Gym Attendance")));
+                StepGoal.setText(String.valueOf(DatabaseHelper.getGoal("Step Count")));
+                FlightsGoal.setText(String.valueOf(DatabaseHelper.getGoal("Flights (Stairs) Climbed")));
+                ResistanceGoal.setText(String.valueOf(DatabaseHelper.getGoal("Resistance Exercise Mass")));
+                
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+            
+        });
+        
     }
 }

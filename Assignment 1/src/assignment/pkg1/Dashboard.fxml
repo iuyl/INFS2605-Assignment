@@ -4,15 +4,14 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
-<?import javafx.scene.control.ProgressIndicator?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.pkg1.FXMLDashboardController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.pkg1.FXMLDashboardController">
    <children>
-      <DatePicker layoutX="478.0" layoutY="10.0" prefHeight="14.0" prefWidth="108.0" />
+      <DatePicker fx:id="datePicker" layoutX="478.0" layoutY="9.0" prefHeight="14.0" prefWidth="108.0" />
       <Label layoutX="67.0" layoutY="60.0" text="Health" underline="true">
          <font>
             <Font size="26.0" />
@@ -24,8 +23,8 @@
             <Font size="14.0" />
          </font>
       </Text>
-      <ProgressBar layoutX="143.0" layoutY="125.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.85" rotate="-90.0" />
-      <Label layoutX="82.0" layoutY="147.0" text="Label">
+      <ProgressBar fx:id="HealthProg" layoutX="143.0" layoutY="125.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.85" rotate="-90.0" />
+      <Label fx:id="HealthGoal" layoutX="82.0" layoutY="147.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
@@ -43,13 +42,13 @@
             <Font size="14.0" />
          </font>
       </Text>
-      <ProgressBar layoutX="142.0" layoutY="196.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.25" rotate="-90.0" />
+      <ProgressBar fx:id="LeanFatProg" layoutX="142.0" layoutY="196.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.25" rotate="-90.0" />
       <Text layoutX="51.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
-      <Label layoutX="77.0" layoutY="220.0" text="Label">
+      <Label fx:id="LeanFatGoal" layoutX="77.0" layoutY="220.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
@@ -81,8 +80,8 @@
             <Font size="10.0" />
          </font>
       </Text>
-      <ProgressBar layoutX="142.0" layoutY="269.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.5" rotate="-90.0" />
-      <Label layoutX="77.0" layoutY="284.0" text="Label">
+      <ProgressBar fx:id="BMIProg" layoutX="142.0" layoutY="269.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.5" rotate="-90.0" />
+      <Label fx:id="BMIGoal" layoutX="77.0" layoutY="284.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
@@ -97,12 +96,12 @@
             <Font size="10.0" />
          </font>
       </Text>
-      <Label layoutX="77.0" layoutY="360.0" text="Label">
+      <Label fx:id="WellbeingGoal" layoutX="77.0" layoutY="360.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <ProgressBar layoutX="142.0" layoutY="343.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.59" rotate="-90.0" />
+      <ProgressBar fx:id="WellbeingProg" layoutX="142.0" layoutY="343.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.59" rotate="-90.0" />
       <Text layoutX="207.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sleep Rating:">
          <font>
             <Font size="14.0" />
@@ -113,7 +112,7 @@
             <Font size="10.0" />
          </font>
       </Text>
-      <Label layoutX="252.0" layoutY="140.0" text="Label">
+      <Label fx:id="SleepGoal" layoutX="252.0" layoutY="140.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
@@ -128,12 +127,11 @@
             <Font size="10.0" />
          </font>
       </Text>
-      <Label layoutX="246.0" layoutY="219.0" text="Label">
+      <Label fx:id="RestingHeartGoal" layoutX="246.0" layoutY="219.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <ProgressIndicator layoutX="308.0" layoutY="184.0" progress="0.26" />
       <Text layoutX="202.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calories Consumed:" wrappingWidth="124.810546875">
          <font>
             <Font size="14.0" />
@@ -144,7 +142,7 @@
             <Font size="10.0" />
          </font>
       </Text>
-      <Label layoutX="246.0" layoutY="291.0" text="Label">
+      <Label fx:id="CaloriesGoal" layoutX="246.0" layoutY="291.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
@@ -159,12 +157,12 @@
             <Font size="10.0" />
          </font>
       </Text>
-      <Label layoutX="474.0" layoutY="140.0" text="Label">
+      <Label fx:id="GymAttendanceGoal" layoutX="474.0" layoutY="140.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <ProgressBar layoutX="530.0" layoutY="125.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.54" rotate="-90.0" />
+      <ProgressBar fx:id="GymAttendanceProg" layoutX="530.0" layoutY="125.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.54" rotate="-90.0" />
       <Text layoutX="429.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Step Count:">
          <font>
             <Font size="14.0" />
@@ -175,29 +173,28 @@
             <Font size="10.0" />
          </font>
       </Text>
-      <Label layoutX="473.0" layoutY="211.0" text="Label">
+      <Label fx:id="StepGoal" layoutX="473.0" layoutY="211.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <ProgressBar layoutX="530.0" layoutY="196.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.48" rotate="-90.0" />
+      <ProgressBar fx:id="StepProg" layoutX="530.0" layoutY="196.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.48" rotate="-90.0" />
       <Text layoutX="431.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flights (Stairs) Climbed:" wrappingWidth="113.572265625">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <ProgressBar layoutX="530.0" layoutY="268.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.35" rotate="-90.0" />
+      <ProgressBar fx:id="FlightsProg" layoutX="530.0" layoutY="268.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.35" rotate="-90.0" />
       <Text layoutX="445.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
-      <Label layoutX="473.0" layoutY="291.0" text="Label">
+      <Label fx:id="FlightsGoal" layoutX="473.0" layoutY="291.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <ProgressIndicator layoutX="308.0" layoutY="113.0" progress="0.45" />
       <Text layoutX="432.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resistance Exercise Mass:" wrappingWidth="113.572265625">
          <font>
             <Font size="14.0" />
@@ -208,13 +205,15 @@
             <Font size="10.0" />
          </font>
       </Text>
-      <Label layoutX="473.0" layoutY="365.0" text="Label">
+      <Label fx:id="ResistanceGoal" layoutX="473.0" layoutY="365.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <ProgressBar layoutX="530.0" layoutY="343.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.68" rotate="-90.0" />
-      <ProgressIndicator layoutX="308.0" layoutY="256.0" progress="0.65" />
+      <ProgressBar fx:id="ResistanceProg" layoutX="530.0" layoutY="343.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.68" rotate="-90.0" />
       <Button fx:id="back" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleBackAction" text="&lt; Back" />
+      <ProgressBar fx:id="SleepProg" layoutX="290.0" layoutY="130.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.85" />
+      <ProgressBar fx:id="RestingHeartProg" layoutX="290.0" layoutY="196.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.85" />
+      <ProgressBar fx:id="CaloriesProg" layoutX="290.0" layoutY="274.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.85" />
    </children>
 </Pane>
