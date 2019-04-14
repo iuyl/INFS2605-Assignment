@@ -3,9 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/Users/aiisonsuherly/Documents/UNI/2019/T1/INFS2605/Assignment/Github/Assignment%201/src/assignment/pkg1/FXMLHomePageController.java</file>
             <file>file:/Users/aiisonsuherly/Documents/UNI/2019/T1/INFS2605/Assignment/Github/Assignment%201/src/assignment/pkg1/FXMLSetGoalController.java</file>
             <file>file:/Users/aiisonsuherly/Documents/UNI/2019/T1/INFS2605/Assignment/Github/Assignment%201/src/assignment/pkg1/Assignment1.java</file>
+=======
+            <file>file:/Users/yilian/INFS2605-Assignment/Assignment%201/src/assignment/pkg1/FXMLDashboardController.java</file>
+            <file>file:/Users/yilian/INFS2605-Assignment/Assignment%201/src/assignment/pkg1/Assignment1.java</file>
+            <file>file:/Users/yilian/INFS2605-Assignment/Assignment%201/src/assignment/pkg1/FXMLEnterDataController.java</file>
+            <file>file:/Users/yilian/INFS2605-Assignment/Assignment%201/src/assignment/pkg1/FXMLSetGoalController.java</file>
+            <file>file:/Users/yilian/INFS2605-Assignment/Assignment%201/src/assignment/pkg1/FXMLHomePageController.java</file>
+            <file>file:/Users/yilian/INFS2605-Assignment/Assignment%201/src/assignment/pkg1/FXMLDocumentController.java</file>
+            <file>file:/Users/yilian/INFS2605-Assignment/Assignment%201/src/assignment/pkg1/DatabaseHelper.java</file>
+>>>>>>> 2ff5906112dff9a4a3dab84343a031532beea028
         </group>
     </open-files>
 </project-private>
