@@ -25,6 +25,7 @@ public class Assignment1 extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+<<<<<<< HEAD
 
 
         connect();
@@ -32,10 +33,15 @@ public class Assignment1 extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml")); 
         
 
+=======
+        Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+        
+>>>>>>> 2b64a9c227044fd828d8f9ae844459cadab58850
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
         stage.show();
+
     }
 
     /**
