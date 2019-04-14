@@ -47,10 +47,6 @@ public class FXMLHomePageController {
             stage.show();
         } catch (Exception e) {
             
-        
-    
-    
-            
         }
     }
     
@@ -65,17 +61,13 @@ public class FXMLHomePageController {
             stage.show();
         } catch (Exception e) {
             
-        
-    
-    
-            
         }
     }
     
     @FXML
     void handleSetGoalAction(ActionEvent event) {
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader (getClass().getResource("SetGoal.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader (getClass().getResource("SetGoals.fxml"));
             Parent root1;
             root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
@@ -83,11 +75,8 @@ public class FXMLHomePageController {
             stage.show();
         } catch (Exception e) {
             
-        
-    
-    
-            
         }
     }
+    
     
 }
