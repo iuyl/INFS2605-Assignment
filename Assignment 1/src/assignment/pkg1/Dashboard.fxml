@@ -9,211 +9,218 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.pkg1.FXMLDashboardController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.pkg1.FXMLDashboardController">
    <children>
-      <DatePicker fx:id="datePicker" layoutX="478.0" layoutY="9.0" prefHeight="14.0" prefWidth="108.0" />
-      <Label layoutX="67.0" layoutY="60.0" text="Health" underline="true">
+      <DatePicker fx:id="datePicker" layoutX="498.0" layoutY="9.0" prefHeight="27.0" prefWidth="88.0" />
+      <Label layoutX="158.0" layoutY="60.0" text="Health" textFill="#c36785">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="30.0" layoutY="102.0" stroke="BLACK" strokeType="INSIDE" width="156.0" />
-      <Text layoutX="38.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Health Check up:" wrappingWidth="113.572265625">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
-      <ProgressBar fx:id="HealthProg" layoutX="143.0" layoutY="125.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.85" rotate="-90.0" />
-      <Label fx:id="HealthGoal" layoutX="82.0" layoutY="147.0" text="Label">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="23.0" layoutY="102.0" stroke="BLACK" strokeType="INSIDE" width="175.0" />
+      <Text layoutX="29.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Health Check up:" wrappingWidth="79.92968559265137" />
+      <ProgressBar fx:id="HealthProg" layoutX="152.0" layoutY="126.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.85" rotate="-90.0" />
+      <Label fx:id="HealthGoal" layoutX="52.0" layoutY="152.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="29.0" layoutY="173.0" stroke="BLACK" strokeType="INSIDE" width="156.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="30.0" layoutY="246.0" stroke="BLACK" strokeType="INSIDE" width="156.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="29.0" layoutY="320.0" stroke="BLACK" strokeType="INSIDE" width="156.0" />
-      <Text layoutX="55.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="23.0" layoutY="173.0" stroke="BLACK" strokeType="INSIDE" width="175.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="23.0" layoutY="246.0" stroke="BLACK" strokeType="INSIDE" width="175.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="23.0" layoutY="319.0" stroke="BLACK" strokeType="INSIDE" width="175.0" />
+      <Text layoutX="25.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
-      <Text layoutX="37.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lean/Fat Mass Ratio:" wrappingWidth="87.185546875">
+      <Text layoutX="32.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lean/Fat Mass Ratio:" wrappingWidth="87.185546875">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <ProgressBar fx:id="LeanFatProg" layoutX="142.0" layoutY="196.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.25" rotate="-90.0" />
-      <Text layoutX="51.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
+      <ProgressBar fx:id="LeanFatProg" layoutX="151.0" layoutY="197.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.25" rotate="-90.0" />
+      <Text layoutX="25.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
-      <Label fx:id="LeanFatGoal" layoutX="77.0" layoutY="220.0" text="Label">
+      <Label fx:id="LeanFatGoal" layoutX="51.0" layoutY="224.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="192.0" layoutY="102.0" stroke="BLACK" strokeType="INSIDE" width="156.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="192.0" layoutY="173.0" stroke="BLACK" strokeType="INSIDE" width="156.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="192.0" layoutY="246.0" stroke="BLACK" strokeType="INSIDE" width="156.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="417.0" layoutY="173.0" stroke="BLACK" strokeType="INSIDE" width="156.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="417.0" layoutY="102.0" stroke="BLACK" strokeType="INSIDE" width="156.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="417.0" layoutY="246.0" stroke="BLACK" strokeType="INSIDE" width="156.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="417.0" layoutY="320.0" stroke="BLACK" strokeType="INSIDE" width="156.0" />
-      <Label layoutX="445.0" layoutY="60.0" text="Fitness" underline="true">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="201.0" layoutY="101.0" stroke="BLACK" strokeType="INSIDE" width="175.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="201.0" layoutY="172.0" stroke="BLACK" strokeType="INSIDE" width="175.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="201.0" layoutY="246.0" stroke="BLACK" strokeType="INSIDE" width="175.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="403.0" layoutY="173.0" stroke="BLACK" strokeType="INSIDE" width="182.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="403.0" layoutY="102.0" stroke="BLACK" strokeType="INSIDE" width="182.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="403.0" layoutY="246.0" stroke="BLACK" strokeType="INSIDE" width="182.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="403.0" layoutY="320.0" stroke="BLACK" strokeType="INSIDE" width="182.0" />
+      <Label layoutX="445.0" layoutY="60.0" text="Fitness" textFill="#21610e">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
-      <Label layoutX="233.0" layoutY="22.0" text="Dashboard" underline="true">
+      <Label layoutX="114.0" layoutY="3.0" text="FITNESS DASHBOARD">
          <font>
-            <Font size="26.0" />
+            <Font size="34.0" />
          </font>
       </Label>
-      <Text layoutX="42.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BMI:">
+      <Text layoutX="33.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BMI:">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <Text layoutX="51.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
+      <Text layoutX="26.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
-      <ProgressBar fx:id="BMIProg" layoutX="142.0" layoutY="269.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.5" rotate="-90.0" />
-      <Label fx:id="BMIGoal" layoutX="77.0" layoutY="284.0" text="Label">
+      <ProgressBar fx:id="BMIProg" layoutX="151.0" layoutY="270.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.5" rotate="-90.0" />
+      <Label fx:id="BMIGoal" layoutX="52.0" layoutY="296.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <Text layoutX="37.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall Wellbeing:">
+      <Text layoutX="27.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall Wellbeing:" wrappingWidth="78.36718261241913">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <Text layoutX="51.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
+      <Text layoutX="25.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
-      <Label fx:id="WellbeingGoal" layoutX="77.0" layoutY="360.0" text="Label">
+      <Label fx:id="WellbeingGoal" layoutX="51.0" layoutY="370.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <ProgressBar fx:id="WellbeingProg" layoutX="142.0" layoutY="343.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.59" rotate="-90.0" />
-      <Text layoutX="207.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sleep Rating:">
+      <ProgressBar fx:id="WellbeingProg" layoutX="151.0" layoutY="344.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.59" rotate="-90.0" />
+      <Text layoutX="213.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sleep Rating:">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <Text layoutX="220.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
+      <Text layoutX="214.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
-      <Label fx:id="SleepGoal" layoutX="252.0" layoutY="140.0" text="Label">
+      <Label fx:id="SleepGoal" layoutX="247.0" layoutY="152.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <Text layoutX="202.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resting Heart Rate:" wrappingWidth="87.9658203125">
+      <Text layoutX="207.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resting Heart Rate:" wrappingWidth="87.9658203125">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <Text layoutX="221.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
+      <Text layoutX="216.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
-      <Label fx:id="RestingHeartGoal" layoutX="246.0" layoutY="219.0" text="Label">
+      <Label fx:id="RestingHeartGoal" layoutX="240.0" layoutY="224.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <Text layoutX="202.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calories Consumed:" wrappingWidth="124.810546875">
+      <Text layoutX="208.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calories Consumed:" wrappingWidth="124.810546875">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <Text layoutX="220.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
+      <Text layoutX="212.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
-      <Label fx:id="CaloriesGoal" layoutX="246.0" layoutY="291.0" text="Label">
+      <Label fx:id="CaloriesGoal" layoutX="238.0" layoutY="296.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <Text layoutX="429.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gym Attendance:">
+      <Text layoutX="411.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gym Attendance:" wrappingWidth="87.18554377555847">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <Text layoutX="445.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
+      <Text layoutX="408.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
-      <Label fx:id="GymAttendanceGoal" layoutX="474.0" layoutY="140.0" text="Label">
+      <Label fx:id="GymAttendanceGoal" layoutX="436.0" layoutY="152.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <ProgressBar fx:id="GymAttendanceProg" layoutX="530.0" layoutY="125.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.54" rotate="-90.0" />
-      <Text layoutX="429.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Step Count:">
+      <ProgressBar fx:id="GymAttendanceProg" layoutX="539.0" layoutY="126.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.54" rotate="-90.0" />
+      <Text layoutX="411.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Step Count:">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <Text layoutX="445.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
+      <Text layoutX="409.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
-      <Label fx:id="StepGoal" layoutX="473.0" layoutY="211.0" text="Label">
+      <Label fx:id="StepGoal" layoutX="437.0" layoutY="224.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <ProgressBar fx:id="StepProg" layoutX="530.0" layoutY="196.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.48" rotate="-90.0" />
-      <Text layoutX="431.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flights (Stairs) Climbed:" wrappingWidth="113.572265625">
+      <ProgressBar fx:id="StepProg" layoutX="539.0" layoutY="197.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.48" rotate="-90.0" />
+      <Text layoutX="413.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flights (Stairs) Climbed:" wrappingWidth="97.572265625">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <ProgressBar fx:id="FlightsProg" layoutX="530.0" layoutY="268.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.35" rotate="-90.0" />
-      <Text layoutX="445.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
+      <ProgressBar fx:id="FlightsProg" layoutX="539.0" layoutY="269.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.35" rotate="-90.0" />
+      <Text layoutX="406.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
-      <Label fx:id="FlightsGoal" layoutX="473.0" layoutY="291.0" text="Label">
+      <Label fx:id="FlightsGoal" layoutX="434.0" layoutY="296.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <Text layoutX="432.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resistance Exercise Mass:" wrappingWidth="113.572265625">
+      <Text layoutX="409.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resistance Exercise Mass:" wrappingWidth="108.00000429153442">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <Text layoutX="445.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
+      <Text layoutX="410.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal:">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
-      <Label fx:id="ResistanceGoal" layoutX="473.0" layoutY="365.0" text="Label">
+      <Label fx:id="ResistanceGoal" layoutX="438.0" layoutY="370.0" text="Label">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <ProgressBar fx:id="ResistanceProg" layoutX="530.0" layoutY="343.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.68" rotate="-90.0" />
+      <ProgressBar fx:id="ResistanceProg" layoutX="539.0" layoutY="344.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.68" rotate="-90.0" />
       <Button fx:id="back" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleBackAction" text="&lt; Back" />
-      <ProgressBar fx:id="SleepProg" layoutX="305.0" layoutY="125.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.85" rotate="-90.0" />
-      <ProgressBar fx:id="RestingHeartProg" layoutX="305.0" layoutY="196.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.85" rotate="-90.0" />
-      <ProgressBar fx:id="CaloriesProg" layoutX="305.0" layoutY="269.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.85" rotate="-90.0" />
+      <ProgressBar fx:id="SleepProg" layoutX="326.0" layoutY="124.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.85" rotate="-90.0" />
+      <ProgressBar fx:id="RestingHeartProg" layoutX="326.0" layoutY="195.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.85" rotate="-90.0" />
+      <ProgressBar fx:id="CaloriesProg" layoutX="326.0" layoutY="268.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.85" rotate="-90.0" />
+      <Label fx:id="HealthLabel" layoutX="99.0" layoutY="126.0" text="Label" />
+      <Label fx:id="SleepLabel" layoutX="304.0" layoutY="110.0" text="Label" />
+      <Label fx:id="GymAttendanceLabel" layoutX="499.0" layoutY="127.0" text="Label" />
+      <Label fx:id="LeanFatLabel" layoutX="113.0" layoutY="198.0" text="Label" />
+      <Label fx:id="RestingHeartLabel" layoutX="288.0" layoutY="192.0" text="Label" />
+      <Label fx:id="StepLabel" layoutX="500.0" layoutY="184.0" text="Label" />
+      <Label fx:id="BMILabel" layoutX="70.0" layoutY="259.0" text="Label" />
+      <Label fx:id="CaloriesLabel" layoutX="287.0" layoutY="270.0" text="Label" />
+      <Label fx:id="FlightsLabel" layoutX="477.0" layoutY="270.0" text="Label" />
+      <Label fx:id="WellbeingLabel" layoutX="100.0" layoutY="344.0" text="Label" />
+      <Label fx:id="ResistanceLabel" layoutX="511.0" layoutY="344.0" text="Label" />
    </children>
 </Pane>

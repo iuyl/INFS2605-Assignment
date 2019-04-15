@@ -27,6 +27,8 @@ import javafx.scene.text.Text;
  */
 public final class DatabaseHelper {
 
+
+
     
     private DatabaseHelper() { }
     
@@ -116,5 +118,31 @@ public final class DatabaseHelper {
         
         //for displaying individual categories, call this method but pass in different 'stat' parameters
         
+        
     }
+    
+     public static double displayProgress(String stat, String date) throws SQLException {
+        //Do SQL query to add new entry, do connect statement for each tine and close
+        
+        Connection conn = DriverManager.getConnection("jdbc:sqlite:fitnessDatabase.db");
+        Statement st = conn.createStatement();
+        
+        String getStatsId = "SELECT ID as STATS_ID from stats where CATEGORY like '" + stat + "'";
+        ResultSet idResult = st.executeQuery(getStatsId);
+        
+        int statsId = idResult.getInt("STATS_ID"); //attn
+        
+        String displayProgress = "SELECT SUM(value) as progress from StatsEntries where STATS_ID = " + statsId
+                                + " and date like '" + date + "'";
+        ResultSet progressResult = st.executeQuery(displayProgress);
+        
+        int progress = progressResult.getInt("progress");
+
+        st.close();
+        conn.close();
+        
+        System.out.println(displayProgress);
+        
+        return progress;
+}
 }

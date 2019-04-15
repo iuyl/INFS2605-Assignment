@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="305.0" prefWidth="243.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.pkg1.FXMLHomePageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="305.0" prefWidth="243.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.pkg1.FXMLHomePageController">
    <children>
-      <Label fx:id="home" layoutX="69.0" layoutY="43.0" text="Home" underline="true">
+      <Label fx:id="home" layoutX="13.0" layoutY="50.0" text="Fitness Home Page" textAlignment="CENTER" textFill="#23976b">
          <font>
-            <Font size="39.0" />
+            <Font size="24.0" />
          </font>
       </Label>
       <Button fx:id="enterData" layoutX="74.0" layoutY="120.0" mnemonicParsing="false" onAction="#handleEnterDataAction" text="Enter Data">

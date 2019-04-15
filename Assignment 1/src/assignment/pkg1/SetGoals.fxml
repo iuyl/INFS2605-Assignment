@@ -10,7 +10,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="305.0" prefWidth="243.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.pkg1.FXMLSetGoalController">
    <children>
-      <Label fx:id="setGoal" layoutX="50.0" layoutY="39.0" text="Set Goal" underline="true">
+      <Label fx:id="setGoal" layoutX="50.0" layoutY="39.0" text="Set Goal">
          <font>
             <Font size="36.0" />
          </font>
