@@ -11,7 +11,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.pkg1.FXMLDashboardController">
    <children>
-      <DatePicker fx:id="datePicker" layoutX="471.0" layoutY="10.0" prefHeight="27.0" prefWidth="125.0" />
+      <DatePicker fx:id="datePicker" layoutX="488.0" layoutY="10.0" prefHeight="27.0" prefWidth="108.0" />
       <Label layoutX="158.0" layoutY="60.0" text="Health" textFill="#c36785">
          <font>
             <Font size="26.0" />
@@ -61,7 +61,7 @@
             <Font size="26.0" />
          </font>
       </Label>
-      <Label layoutX="129.0" layoutY="5.0" text="FITNESS DASHBOARD">
+      <Label layoutX="135.0" layoutY="5.0" text="FITNESS DASHBOARD">
          <font>
             <Font size="30.0" />
          </font>
