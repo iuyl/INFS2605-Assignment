@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.pkg1.FXMLDashboardController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.pkg1.FXMLDashboardController">
    <children>
       <DatePicker fx:id="datePicker" layoutX="478.0" layoutY="9.0" prefHeight="14.0" prefWidth="108.0" />
       <Label layoutX="67.0" layoutY="60.0" text="Health" underline="true">
@@ -212,8 +212,8 @@
       </Label>
       <ProgressBar fx:id="ResistanceProg" layoutX="530.0" layoutY="343.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.68" rotate="-90.0" />
       <Button fx:id="back" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleBackAction" text="&lt; Back" />
-      <ProgressBar fx:id="SleepProg" layoutX="290.0" layoutY="130.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.85" />
-      <ProgressBar fx:id="RestingHeartProg" layoutX="290.0" layoutY="196.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.85" />
-      <ProgressBar fx:id="CaloriesProg" layoutX="290.0" layoutY="274.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.85" />
+      <ProgressBar fx:id="SleepProg" layoutX="305.0" layoutY="125.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.85" rotate="-90.0" />
+      <ProgressBar fx:id="RestingHeartProg" layoutX="305.0" layoutY="196.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.85" rotate="-90.0" />
+      <ProgressBar fx:id="CaloriesProg" layoutX="305.0" layoutY="269.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="58.0" progress="0.85" rotate="-90.0" />
    </children>
 </Pane>

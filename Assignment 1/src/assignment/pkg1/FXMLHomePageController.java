@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -45,6 +46,7 @@ public class FXMLHomePageController {
             Stage stage = new Stage();
             stage.setScene(new Scene(root1));
             stage.show();
+            ((Node)(event.getSource())).getScene().getWindow().hide();
         } catch (Exception e) {
             
         }
@@ -59,6 +61,7 @@ public class FXMLHomePageController {
             Stage stage = new Stage();
             stage.setScene(new Scene(root1));
             stage.show();
+            ((Node)(event.getSource())).getScene().getWindow().hide();
         } catch (Exception e) {
             
         }
@@ -73,6 +76,7 @@ public class FXMLHomePageController {
             Stage stage = new Stage();
             stage.setScene(new Scene(root1));
             stage.show();
+            ((Node)(event.getSource())).getScene().getWindow().hide();
         } catch (Exception e) {
             
         }
