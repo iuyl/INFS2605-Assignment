@@ -112,7 +112,7 @@ public final class DatabaseHelper {
         conn.close();
         
         System.out.println(getProgress);
-        System.out.println("Progress as " + progress + " for " + stat);
+        System.out.println("Progress bar as " + progress + " for " + stat);
         
         return (double)progress/getGoal(stat);
         
@@ -127,21 +127,23 @@ public final class DatabaseHelper {
         Connection conn = DriverManager.getConnection("jdbc:sqlite:fitnessDatabase.db");
         Statement st = conn.createStatement();
         
-        String getStatsId = "SELECT ID as STATS_ID from stats where CATEGORY like '" + stat + "'";
+       String getStatsId = "SELECT ID as STATS_ID from stats where CATEGORY like '" + stat + "'";
         ResultSet idResult = st.executeQuery(getStatsId);
         
         int statsId = idResult.getInt("STATS_ID"); //attn
         
-        String displayProgress = "SELECT SUM(value) as progress from StatsEntries where STATS_ID = " + statsId
+        String getProgress = "SELECT SUM(value) as progress from StatsEntries where STATS_ID = " + statsId
                                 + " and date like '" + date + "'";
-        ResultSet progressResult = st.executeQuery(displayProgress);
+        ResultSet progressResult = st.executeQuery(getProgress);
         
-        int progress = progressResult.getInt("progress");
+        int progress = progressResult.getInt("progress"); //attn
 
         st.close();
         conn.close();
         
-        System.out.println(displayProgress);
+        System.out.println(getProgress);
+        
+        System.out.println("Progress label shows: " + progress);
         
         return progress;
 }

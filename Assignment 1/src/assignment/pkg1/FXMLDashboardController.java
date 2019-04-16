@@ -167,8 +167,8 @@ public class FXMLDashboardController implements Initializable {
         String dateAsString = date.toString();
 
         double progress = DatabaseHelper.displayProgress(stat, dateAsString);
-        System.out.println("Progress " + progress + " for " + stat);
-        progressLabel.setText(String.valueOf(DatabaseHelper.displayProgress(stat, dateAsString)));
+        System.out.println("Progress Label " + progress + " for " + stat);
+        progressLabel.setText(String.valueOf(progress));
     }
 
     void updateProgressBar(ProgressBar progressBar, String stat) throws SQLException {
@@ -183,6 +183,8 @@ public class FXMLDashboardController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        datePicker.setValue(LocalDate.now());
 
         HashMap<String, ProgressBar> statsMap = new HashMap<String, ProgressBar>();
         statsMap.put("BMI", BMIProg);
@@ -209,8 +211,6 @@ public class FXMLDashboardController implements Initializable {
         displayMap.put("Step Count", StepLabel);
         displayMap.put("Flights (Stairs) Climbed", FlightsLabel);
         displayMap.put("Resistance Exercise Mass", ResistanceLabel);
-
-        datePicker.setValue(LocalDate.now());
 
         try {
             for (HashMap.Entry<String, Label> entry : displayMap.entrySet()) {
@@ -246,8 +246,14 @@ public class FXMLDashboardController implements Initializable {
         }
 
         datePicker.setOnAction((ActionEvent e) -> {
-
             try {
+                for (HashMap.Entry<String, Label> entry : displayMap.entrySet()) {
+                    try {
+                        updateLabel(entry.getValue(), entry.getKey());
+                    } catch (SQLException ex) {
+                        ex.printStackTrace();
+                    }
+                }
                 for (HashMap.Entry<String, ProgressBar> entry : statsMap.entrySet()) {
                     try {
                         updateProgressBar(entry.getValue(), entry.getKey());
