@@ -121,6 +121,10 @@ public class Assignment1 extends Application {
                 + "VALUES (11, 'Resistance Exercise Mass');";
         st.execute(insertResistanceMass);
         
+         String insertAerobic = "INSERT OR IGNORE INTO Stats (ID, CATEGORY) "
+                + "VALUES (12, 'Aerobic Exercise');";
+        st.execute(insertAerobic);
+        
         
         st.close();
         conn.close();   

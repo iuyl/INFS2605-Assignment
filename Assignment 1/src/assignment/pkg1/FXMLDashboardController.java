@@ -77,6 +77,9 @@ public class FXMLDashboardController implements Initializable {
 
     @FXML
     private ProgressBar SleepProg;
+    
+    @FXML
+    private ProgressBar AerobicProg;
 
     @FXML
     private Label HealthLabel;
@@ -110,6 +113,9 @@ public class FXMLDashboardController implements Initializable {
 
     @FXML
     private Label SleepLabel;
+    
+    @FXML
+    private Label AerobicLabel;
 
     @FXML
     private Label HealthGoal;
@@ -143,6 +149,9 @@ public class FXMLDashboardController implements Initializable {
 
     @FXML
     private Label SleepGoal;
+    
+    @FXML
+    private Label AerobicGoal;
 
     @FXML
     private DatePicker datePicker;
@@ -198,6 +207,7 @@ public class FXMLDashboardController implements Initializable {
         statsMap.put("Step Count", StepProg);
         statsMap.put("Flights (Stairs) Climbed", FlightsProg);
         statsMap.put("Resistance Exercise Mass", ResistanceProg);
+        statsMap.put("Aerobic Exercise", AerobicProg);
 
         HashMap<String, Label> displayMap = new HashMap<String, Label>();
         displayMap.put("BMI", BMILabel);
@@ -211,6 +221,8 @@ public class FXMLDashboardController implements Initializable {
         displayMap.put("Step Count", StepLabel);
         displayMap.put("Flights (Stairs) Climbed", FlightsLabel);
         displayMap.put("Resistance Exercise Mass", ResistanceLabel);
+        displayMap.put("Aerobic Exercise", AerobicLabel);
+        
 
         try {
             for (HashMap.Entry<String, Label> entry : displayMap.entrySet()) {
@@ -239,6 +251,7 @@ public class FXMLDashboardController implements Initializable {
             StepGoal.setText(String.valueOf(DatabaseHelper.getGoal("Step Count")));
             FlightsGoal.setText(String.valueOf(DatabaseHelper.getGoal("Flights (Stairs) Climbed")));
             ResistanceGoal.setText(String.valueOf(DatabaseHelper.getGoal("Resistance Exercise Mass")));
+            AerobicGoal.setText(String.valueOf(DatabaseHelper.getGoal("Aerobic Exercise")));
 
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -273,6 +286,7 @@ public class FXMLDashboardController implements Initializable {
                 StepGoal.setText(String.valueOf(DatabaseHelper.getGoal("Step Count")));
                 FlightsGoal.setText(String.valueOf(DatabaseHelper.getGoal("Flights (Stairs) Climbed")));
                 ResistanceGoal.setText(String.valueOf(DatabaseHelper.getGoal("Resistance Exercise Mass")));
+                AerobicGoal.setText(String.valueOf(DatabaseHelper.getGoal("Aerobic Exercise")));
 
             } catch (SQLException ex) {
                 ex.printStackTrace();

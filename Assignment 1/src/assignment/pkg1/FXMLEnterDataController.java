@@ -84,7 +84,7 @@ public class FXMLEnterDataController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
          categoryMenu.getItems().removeAll(categoryMenu.getItems());
-         categoryMenu.getItems().addAll("Last Health Check", "Lean/Fat Mass Ratio", "BMI", "Overall Wellbeing", "Sleep Rating", "Resting Heart Rate", "Calories Consumed", "Gym Attendance", "Step Count", "Flights (Stairs) Climbed", "Resistance Exercise Mass");
+         categoryMenu.getItems().addAll("Last Health Check", "Lean/Fat Mass Ratio", "BMI", "Overall Wellbeing", "Sleep Rating", "Resting Heart Rate", "Calories Consumed", "Gym Attendance", "Step Count", "Flights (Stairs) Climbed", "Resistance Exercise Mass", "Aerobic Exercise");
          
          
          
