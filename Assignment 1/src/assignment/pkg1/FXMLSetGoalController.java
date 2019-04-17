@@ -68,7 +68,7 @@ public class FXMLSetGoalController implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
         System.out.println("Initialising");
         categoryMenu.getItems().removeAll(categoryMenu.getItems());
-        categoryMenu.getItems().addAll("Last Health Check", "Lean/Fat Mass Ratio", "BMI", "Overall Wellbeing", "Sleep Rating", "Resting Heart Rate", "Calories Consumed", "Gym Attendance", "Step Count", "Flights (Stairs) Climbed", "Resistance Exercise Mass");
+        categoryMenu.getItems().addAll("Last Health Check", "Lean/Fat Mass Ratio", "BMI", "Overall Wellbeing", "Sleep Rating", "Resting Heart Rate", "Calories Consumed", "Gym Attendance", "Step Count", "Flights (Stairs) Climbed", "Resistance Exercise Mass", "Aerobic Exercise");
 
         save.setOnAction((ActionEvent e) -> {
             try {
