@@ -62,6 +62,9 @@ public class FXMLEnterDataController implements Initializable {
     private Button save;
     
     @FXML
+    private Label successLabel;
+    
+    @FXML
     void handleBackAction(ActionEvent event) {
         try{
             FXMLLoader fxmlLoader = new FXMLLoader (getClass().getResource("HomePage.fxml"));
@@ -76,9 +79,11 @@ public class FXMLEnterDataController implements Initializable {
         }
     }
     //method to parse date into ISO8601 String
+    @FXML
     void handleSaveButtonClick() throws SQLException {
         LocalDate date = datePicker.getValue();
         DatabaseHelper.addNewStatEntry(category.toString(), 0, date.toString());
+        successLabel.setText("Data Entered.");
     }
 
     @Override

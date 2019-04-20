@@ -5,16 +5,11 @@
  */
 package assignment.pkg1;
 
-import java.io.IOException;
 import java.net.URL;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,153 +20,94 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.ProgressBar;
-import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
+ * FXML Controller class
  *
  * @author aiisonsuherly
  */
-public class FXMLDashboardController implements Initializable {
+public class Dashboard2Controller implements Initializable {
 
     @FXML
-    private Label dashboard;
-
-    @FXML
-    private Label health;
-
-    @FXML
-    private Label fitness;
-
-    @FXML
-    private ProgressBar HealthProg;
-
-    @FXML
-    private ProgressBar LeanFatProg;
-
-    @FXML
-    private ProgressBar BMIProg;
-
-    @FXML
-    private ProgressBar WellbeingProg;
-
-    @FXML
-    private ProgressBar GymAttendanceProg;
-
-    @FXML
-    private ProgressBar StepProg;
-
-    @FXML
-    private ProgressBar RestingHeartProg;
-
-    @FXML
-    private ProgressBar CaloriesProg;
-
-    @FXML
-    private ProgressBar FlightsProg;
-
-    @FXML
-    private ProgressBar ResistanceProg;
-
-    @FXML
-    private ProgressBar SleepProg;
-    
-    @FXML
-    private ProgressBar AerobicProg;
-
-    @FXML
-    private Label HealthLabel;
-
-    @FXML
-    private Label LeanFatLabel;
-
-    @FXML
-    private Label BMILabel;
-
-    @FXML
-    private Label WellbeingLabel;
-
-    @FXML
-    private Label GymAttendanceLabel;
-
-    @FXML
-    private Label StepLabel;
-
-    @FXML
-    private Label RestingHeartLabel;
-
-    @FXML
-    private Label CaloriesLabel;
-
-    @FXML
-    private Label FlightsLabel;
-
-    @FXML
-    private Label ResistanceLabel;
-
-    @FXML
-    private Label SleepLabel;
-    
-    @FXML
-    private Label AerobicLabel;
-
-    @FXML
-    private Label HealthGoal;
-
-    @FXML
-    private Label LeanFatGoal;
-
-    @FXML
-    private Label BMIGoal;
-
-    @FXML
-    private Label WellbeingGoal;
-
-    @FXML
-    private Label GymAttendanceGoal;
-
-    @FXML
-    private Label StepGoal;
-
-    @FXML
-    private Label RestingHeartGoal;
-
-    @FXML
-    private Label CaloriesGoal;
-
-    @FXML
-    private Label FlightsGoal;
-
-    @FXML
-    private Label ResistanceGoal;
-
-    @FXML
-    private Label SleepGoal;
-    
-    @FXML
-    private Label AerobicGoal;
-
+    private Label fitnessDashboard;
     @FXML
     private DatePicker datePicker;
-
     @FXML
-    void handleBackAction(ActionEvent event) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("HomePage.fxml"));
-            Parent root1;
-            root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.show();
-            ((Node) (event.getSource())).getScene().getWindow().hide();
-        } catch (Exception e) {
+    private Button back;
+    @FXML
+    private ProgressBar SleepProg;
+    @FXML
+    private Text SleepLabel;
+    @FXML
+    private Text SleepGoal;
+    @FXML
+    private ProgressBar WellbeingProg;
+    @FXML
+    private Text WellbeingLabel;
+    @FXML
+    private Text WellbeingGoal;
+    @FXML
+    private Text RestingHeartLabel;
+    @FXML
+    private Text RestingHeartGoal;
+    @FXML
+    private ProgressBar RestingHeartProg;
+    @FXML
+    private ProgressBar GymAttendanceProg;
+    @FXML
+    private Text GymAttendanceLabel;
+    @FXML
+    private Text GymAttendanceGoal;
+    @FXML
+    private ProgressBar StepProg;
+    @FXML
+    private ProgressBar ResistanceProg;
+    @FXML
+    private Text ResistanceLabel;
+    @FXML
+    private Text ResistanceGoal;
+    @FXML
+    private Text BMILabel;
+    @FXML
+    private ProgressBar LeanFatProg;
+    @FXML
+    private Text LeanFatLabel;
+    @FXML
+    private Text LeanFatGoal;
+    @FXML
+    private ProgressBar AerobicProg;
+    @FXML
+    private Text AerobicLabel;
+    @FXML
+    private Text AerobicGoal;
+    @FXML
+    private Text HealthLabel;
+    @FXML
+    private Text StepLabel;
+    @FXML
+    private Text StepGoal;
+    @FXML
+    private ProgressBar CaloriesProg;
+    @FXML
+    private Text FlightsLabel;
+    @FXML
+    private Text FlightsGoal;
+    @FXML
+    private ProgressBar FlightsProg;
+    @FXML
+    private Text CaloriesLabel;
+    @FXML
+    private Text CaloriesGoal;
+    @FXML
+    private Text BMIGoal;
 
-        }
-    }
-
-    void updateLabel(Label progressLabel, String stat) throws SQLException {
+    /**
+     * Initializes the controller class.
+     */
+    void updateLabel(Text progressLabel, String stat) throws SQLException {
         LocalDate date = datePicker.getValue();
         String dateAsString = date.toString();
 
@@ -189,15 +125,15 @@ public class FXMLDashboardController implements Initializable {
         progressBar.setProgress(progress);
 
     }
-
+    
+    
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
+    public void initialize(URL url, ResourceBundle rb) {
         datePicker.setValue(LocalDate.now());
 
         HashMap<String, ProgressBar> statsMap = new HashMap<String, ProgressBar>();
-        statsMap.put("BMI", BMIProg);
-        statsMap.put("Last Health Check", HealthProg);
+//        statsMap.put("BMI", BMIProg);
+//        statsMap.put("Last Health Check", HealthProg);
         statsMap.put("Lean/Fat Mass Ratio", LeanFatProg);
         statsMap.put("Overall Wellbeing", WellbeingProg);
         statsMap.put("Sleep Rating", SleepProg);
@@ -209,7 +145,7 @@ public class FXMLDashboardController implements Initializable {
         statsMap.put("Resistance Exercise Mass", ResistanceProg);
         statsMap.put("Aerobic Exercise", AerobicProg);
 
-        HashMap<String, Label> displayMap = new HashMap<String, Label>();
+        HashMap<String, Text> displayMap = new HashMap<String, Text>();
         displayMap.put("BMI", BMILabel);
         displayMap.put("Last Health Check", HealthLabel);
         displayMap.put("Lean/Fat Mass Ratio", LeanFatLabel);
@@ -223,9 +159,8 @@ public class FXMLDashboardController implements Initializable {
         displayMap.put("Resistance Exercise Mass", ResistanceLabel);
         displayMap.put("Aerobic Exercise", AerobicLabel);
         
-
         try {
-            for (HashMap.Entry<String, Label> entry : displayMap.entrySet()) {
+            for (HashMap.Entry<String, Text> entry : displayMap.entrySet()) {
                 try {
                     updateLabel(entry.getValue(), entry.getKey());
                 } catch (SQLException ex) {
@@ -241,7 +176,7 @@ public class FXMLDashboardController implements Initializable {
             }
 
             BMIGoal.setText(String.valueOf(DatabaseHelper.getGoal("BMI")));
-            HealthGoal.setText(String.valueOf(DatabaseHelper.getGoal("Last Health Check")));
+//            HealthGoal.setText(String.valueOf(DatabaseHelper.getGoal("Last Health Check")));
             LeanFatGoal.setText(String.valueOf(DatabaseHelper.getGoal("Lean/Fat Mass Ratio")));
             WellbeingGoal.setText(String.valueOf(DatabaseHelper.getGoal("Overall Wellbeing")));
             SleepGoal.setText(String.valueOf(DatabaseHelper.getGoal("Sleep Rating")));
@@ -257,10 +192,9 @@ public class FXMLDashboardController implements Initializable {
             ex.printStackTrace();
 
         }
-
         datePicker.setOnAction((ActionEvent e) -> {
             try {
-                for (HashMap.Entry<String, Label> entry : displayMap.entrySet()) {
+                for (HashMap.Entry<String, Text> entry : displayMap.entrySet()) {
                     try {
                         updateLabel(entry.getValue(), entry.getKey());
                     } catch (SQLException ex) {
@@ -276,7 +210,7 @@ public class FXMLDashboardController implements Initializable {
                 }
 
                 BMIGoal.setText(String.valueOf(DatabaseHelper.getGoal("BMI")));
-                HealthGoal.setText(String.valueOf(DatabaseHelper.getGoal("Last Health Check")));
+//                HealthGoal.setText(String.valueOf(DatabaseHelper.getGoal("Last Health Check")));
                 LeanFatGoal.setText(String.valueOf(DatabaseHelper.getGoal("Lean/Fat Mass Ratio")));
                 WellbeingGoal.setText(String.valueOf(DatabaseHelper.getGoal("Overall Wellbeing")));
                 SleepGoal.setText(String.valueOf(DatabaseHelper.getGoal("Sleep Rating")));
@@ -293,7 +227,21 @@ public class FXMLDashboardController implements Initializable {
             }
 
         });
+    }    
+
+    @FXML
+    private void handleBackAction(ActionEvent event) {
+            try{
+            FXMLLoader fxmlLoader = new FXMLLoader (getClass().getResource("HomePage.fxml"));
+            Parent root1;
+            root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));
+            stage.show();
+            ((Node)(event.getSource())).getScene().getWindow().hide();
+        } catch (Exception e) {
+        }
 
     }
-
+    
 }

@@ -17,6 +17,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 /**
@@ -38,6 +39,9 @@ public class FXMLHomePageController {
     private Button setGoal;
     
     @FXML
+    private ImageView background;
+    
+    @FXML
     void handleEnterDataAction(ActionEvent event) {
         try{
             FXMLLoader fxmlLoader = new FXMLLoader (getClass().getResource("EnterData.fxml"));
@@ -55,7 +59,7 @@ public class FXMLHomePageController {
     @FXML
     void handleProgressAction(ActionEvent event) {
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader (getClass().getResource("Dashboard.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader (getClass().getResource("Dashboard2.fxml"));
             Parent root1;
             root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();

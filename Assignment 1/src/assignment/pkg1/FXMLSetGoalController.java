@@ -48,6 +48,9 @@ public class FXMLSetGoalController implements Initializable{
 
     @FXML
     private Button save;
+    
+    @FXML
+    private Label savedLabel;
 
     @FXML
     void handleBackAction(ActionEvent event) {
@@ -62,6 +65,12 @@ public class FXMLSetGoalController implements Initializable{
         } catch (Exception e) {
 
         }
+    }
+    
+    @FXML
+    void handleSaveAction(ActionEvent event) {
+        System.out.println("You clicked me!");
+        savedLabel.setText("Hello World!");
     }
 
     @Override
