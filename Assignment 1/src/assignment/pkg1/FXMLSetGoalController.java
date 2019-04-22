@@ -62,7 +62,7 @@ public class FXMLSetGoalController implements Initializable{
             stage.setScene(new Scene(root1));
             stage.show();
             ((Node)(event.getSource())).getScene().getWindow().hide();
-            //https://stackoverflow.com/questions/25037724/how-to-close-a-java-window-with-a-button-click-javafx-project
+            //Source: https://stackoverflow.com/questions/25037724/how-to-close-a-java-window-with-a-button-click-javafx-project
         } catch (Exception e) {
 
         }
@@ -79,7 +79,7 @@ public class FXMLSetGoalController implements Initializable{
         System.out.println("Initialising");
         categoryMenu.getItems().removeAll(categoryMenu.getItems());
         categoryMenu.getItems().addAll("Last Health Check", "Lean/Fat Mass Ratio", "BMI", "Overall Wellbeing", "Sleep Rating", "Resting Heart Rate", "Calories Consumed", "Gym Attendance", "Step Count", "Flights (Stairs) Climbed", "Resistance Exercise Mass", "Aerobic Exercise");
-        //https://stackoverflow.com/questions/35260061/combobox-items-via-scene-builder
+        //Source: https://stackoverflow.com/questions/35260061/combobox-items-via-scene-builder
 
         save.setOnAction((ActionEvent e) -> {
             try {
